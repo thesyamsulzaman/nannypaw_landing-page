@@ -1,0 +1,27 @@
+@mixin transition($duration, $property ) {
+  transition: $duration $property;
+}
+
+
+@mixin fadeOut($duration) {
+  opacity:0;
+  @include transition($duration, ease-in);
+}
+
+
+@mixin fadeIn($duration) {
+  opacity:1;
+  @include transition($duration, ease-in);
+}
+
+@mixin slideDownAndfadeOut() {
+  transform: translateY(20px);
+  opacity:0;
+  @include transition(.2s, ease-in);
+}
+
+@mixin slideUpAndFadeIn($duration) {
+  transform: translateY(0);
+  opacity:1;
+  @include transition($duration, ease-in);
+}

@@ -1,0 +1,83 @@
+.features {
+  height: auto;
+  padding: 1em 0;
+  width: 100%;
+  background-color: #fefefe;
+  position: relative;
+
+  &__header {
+    text-align: center;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.74em;
+    padding-bottom: 0.7em;
+    position: relative;
+  }
+
+  &__header::after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 30px; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 3px solid grey; /* This creates the border. Replace black with whatever color you want. */
+  }
+
+  &__card {
+    height: auto;
+    margin: 2em 0;
+    padding: 1em 0;
+
+    &__img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    &__desc > * {
+      //border: 1px solid magenta;
+    }
+    &__desc {
+      padding: 0.71em;
+      height: auto;
+
+      &__header {
+        font-size: 1.5rem;
+        margin: 0.5em 0;
+      }
+
+      &__text {
+        font-size: 0.92rem;
+        text-align: left;
+      }
+      &__button {
+        margin-top: 1.2em;
+        text-transform: uppercase;
+        color: black;
+        border: 1px solid black;
+        padding: 8px 12px 8px 12px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .features__card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 35vh;
+    padding: 3em 0;
+  }
+  .features__card:nth-child(1) {
+  }
+  .features__card:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+  .features__card__img {
+    width: 500px;
+    margin: 0 0.3em;
+  }
+  .features__card__desc {
+    max-width: 500px;
+  }
+}

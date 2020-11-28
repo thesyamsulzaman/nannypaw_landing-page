@@ -1,0 +1,95 @@
+.hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/orange-tabby-cat-near-window-2071873.jpg");
+  position: fixed;
+  background-size: cover;
+  background-position: 0% 30%;
+  height: 100%;
+  width: 100%;
+  content: "";
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0% 0%, 100% 0, 156% 70%, 0 95%);
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  content: "";
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.hero__container__one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+}
+.hero__container__two__img {
+  width: 250px;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+.hero__title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  position: relative;
+}
+.hero__input {
+  position: relative;
+  display: flex;
+  background: #fff;
+  padding: 6px 12px 6px 12px;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+
+.hero__input__text {
+  border: none;
+  width: 80%;
+  padding: 10px;
+  font-size: 0.93rem;
+}
+.hero__input__text:focus {
+  outline: none;
+}
+
+.hero__text {
+  color: white;
+  position: relative;
+}
+.hero__text a {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .hero::before {
+    color: white;
+  }
+
+  .hero__container__one {
+    max-width: 500px;
+  }
+}

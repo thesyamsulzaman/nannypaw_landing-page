@@ -1,0 +1,110 @@
+.pricing {
+  height: auto;
+  padding: 2em 0 4em 0;
+
+  &__header {
+    text-align: center;
+    color: $coal;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1em;
+    position: relative;
+  }
+  &__header::after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 30px; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 3px solid grey; /* This creates the border. Replace black with whatever color you want. */
+  }
+  .pricing__cards {
+    //display: grid;
+    //justify-items: center;
+    //align-items: center;
+    display: grid;
+    //flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    justify-items: center;
+    grid-auto-flow: row;
+    //flex-wrap: wrap;
+  }
+  .pricing__card {
+    height: auto;
+    padding: 1.51em 0;
+    width: 300px;
+    margin-top: 2em;
+    margin: 2em 1em 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 10px;
+  }
+  .pricing__card:nth-child(1) {
+    background-color: #8b75ba;
+  }
+  .pricing__card:nth-child(2) {
+    background-color: #4bba93;
+  }
+  .pricing__card:nth-child(3) {
+    background-color: #319ae1;
+  }
+  .pricing__card__pricelabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+  }
+  .pricing__card__pricelabel h1:nth-child(1) {
+    font-size: 30px;
+  }
+  .pricing__card__pricelabel h1:nth-child(2) {
+    font-size: 60px;
+  }
+  .pricing__card__pricelabel h1:nth-child(3) {
+    font-size: 30px;
+  }
+  .pricing__card__desc {
+    max-width: 200px;
+    text-align: center;
+  }
+  .pricing__card__features {
+    margin-top: 1.1em;
+    color: #fff;
+  }
+  .pricing__card__features__list {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+  .pricing__card__features__list p {
+    font-size: 0.9rem;
+    margin-left: 0.9em;
+    text-transform: capitalize;
+  }
+}
+
+.pricing__card {
+  @include slideDownAndfadeOut; 
+}
+
+.pricing__card--loaded:nth-child(1) { @include slideUpAndFadeIn(.1s); }
+.pricing__card--loaded:nth-child(2) { @include slideUpAndFadeIn(.2s); }
+.pricing__card--loaded:nth-child(3) { @include slideUpAndFadeIn(.3s); }
+
+@media (min-width: $breakpoint-tablet) {
+  .pricing__header {
+    font-size: 2rem;
+  }
+  .pricing__cards {
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    //justify-items: center;
+  }
+}

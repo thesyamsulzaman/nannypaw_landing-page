@@ -1,0 +1,102 @@
+
+.testimonial {
+  //clip-path: polygon(0 20%, 115% 0, 100% 80%, 0 100%);
+  //height: auto;
+  //background-color: #303a52;
+  //color: #fff;
+
+  //&__header {
+    //text-align: center;
+    //color: #fff;
+    //text-transform: uppercase;
+    //letter-spacing: 2px;
+    //position: relative;
+  //}
+
+  //&__header::after {
+    //content: ""; [> This is necessary for the pseudo element to work. <]
+    //display: block; [> This will put the pseudo element on its own line. <]
+    //margin: 0 auto; [> This will center the border. <]
+    //width: 30px; [> Change this to whatever width you want. <]
+    //padding-top: 20px; [> This creates some space between the element and the border. <]
+    //border-bottom: 3px solid #fff; [> This creates the border. Replace black with whatever color you want. <]
+  //}
+
+  //&__cards {
+    //padding: 0.51em 0;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    //flex-wrap: wrap;
+    //position: relative;
+  //}
+
+  //&__cards__navigator {
+    //position: absolute;
+    //bottom: 0;
+    //right: 0;
+  //}
+
+  //&__card {
+    //width: 310px;
+    //height: auto;
+    //border-radius: 12px;
+    //color: #fff;
+    //padding: 1em 0;
+    //margin-top: 1.2em;
+    //margin: 1.2em 1em 0 1em;
+
+    //&__content {
+      //margin: 0 auto;
+      //max-width: 85%;
+      //font-weight: 100;
+      //text-align: left;
+    //}
+
+    //&__account {
+      //display: flex;
+      //align-items: center;
+      //margin: 1em 0 0 1.28em;
+      //width: auto;
+
+      //&__img {
+        //box-sizing: border-box;
+        //background-color: lightblue;
+        //text-align: center;
+        //padding-top: 7px;
+        //width: 40px;
+        //height: 40px;
+        //border-radius: 50%;
+        //margin-right: 1em;
+        //object-fit: cover;
+      //}
+      //&__user {
+        //&__name {
+          //font-size: 15px;
+        //}
+        //&__company {
+          //font-size: 12px;
+          //color: #b8b2a6;
+        //}
+      //}
+    //}
+  //}
+}
+
+.testimonial__card:nth-child(2)
+  .testimonial__card__account
+  .testimonial__card__account__img {
+  background-color: lightgreen;
+}
+
+.testimonial__card:nth-child(3)
+  .testimonial__card__account
+  .testimonial__card__account__img {
+  background-color: lightcyan;
+}
+@media (min-width: 768px) {
+  .testimonial__cards {
+    flex-direction: row;
+  }
+}

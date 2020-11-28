@@ -1,0 +1,115 @@
+.hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/orange-tabby-cat-near-window-2071873.jpg");
+  position: absolute;
+  background-size: cover;
+  background-position: 0% 30%;
+  height: 100%;
+  width: 100%;
+  content: "";
+}
+.hero {
+  position: relative;
+  height:100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0% 0%, 100% 0, 300% 70%, 0 100%);
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  content: "";
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.hero__container__one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+}
+.hero__container__two__img {
+  width: 250px;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+
+
+.hero__title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  position: relative;
+  margin: .21em 0;
+  @include slideDownAndfadeOut; 
+
+}
+
+.hero__input {
+  position: relative;
+  display: flex;
+  background: #fff;
+  padding: 6px 12px 6px 12px;
+  justify-content: space-around;
+  border-radius: 8px;
+  margin: 1em 0;
+  @include slideDownAndfadeOut; 
+
+}
+
+
+
+.hero__input:focus {
+  outline: blue;
+  border: 5px solid magenta;
+}
+
+.hero__input__text {
+  border: none;
+  width: 80%;
+  padding: 10px;
+  font-size: 0.93rem;
+}
+.hero__input__text:focus {
+  outline: none;
+}
+
+.hero__text {
+  position: relative;
+  margin: .21em 0;
+  @include slideDownAndfadeOut; 
+}
+
+.hero__text a {
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-family: $font-light;
+}
+
+.title-page-loaded { @include slideUpAndFadeIn(.2s); }
+.search_box-page-loaded { @include slideUpAndFadeIn(.3s); }
+.sub_text-page-loaded { @include slideUpAndFadeIn(.4s); }
+
+@media (min-width: $breakpoint-tablet) {
+  .hero__container__one {
+    max-width: 500px;
+  }
+}

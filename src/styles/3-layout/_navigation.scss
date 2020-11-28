@@ -1,0 +1,51 @@
+.nav-scrolled {
+ background-color: $youngPurple;
+}
+
+header {
+  padding: .2em 0 .5em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  @include transition(.2s, ease-in);
+
+
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__icon {
+      width: 150px;
+      height: auto;
+      margin-top: 4px;
+    }
+
+    &__list {
+      text-align: left;
+      list-style: none;
+      margin-top: 1.0em;
+      align-self: flex-start;
+      
+
+      &__item {
+        text-align: left;
+        margin-top: 0.82em;
+      }
+    }
+
+    &__list--hidden {
+      display: none;
+    }
+    &__hamburger {
+      position: absolute;
+      top: 8px;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+    }
+  }
+}

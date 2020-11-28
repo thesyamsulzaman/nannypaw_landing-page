@@ -1,0 +1,31 @@
+/*Global Setting*/
+
+* {
+  //border: 2px solid purple;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: OpenSans-Light;
+}
+
+h1 {
+  font-size: 1.33rem;
+}
+
+a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-family: OpenSans-Regular;
+}
+p {
+  font-family: OpenSans-Regular;
+  font-size: 0.85rem;
+}
+
+.root__container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
