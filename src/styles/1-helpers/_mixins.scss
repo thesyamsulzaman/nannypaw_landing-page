@@ -2,7 +2,6 @@
   transition: $duration $property;
 }
 
-
 @mixin fadeOut($duration) {
   opacity:0;
   @include transition($duration, ease-in);
